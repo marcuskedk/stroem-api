@@ -59,18 +59,18 @@ app.use( session( {
 // OBS OBS OBS!!! 
 // Udkommenter/slet denne del, hvis der skal være adgang til ADMIN-metoder UDEN login
 
-app.use( '*/admin*', async ( req, res, next ) => {
+// app.use( '*/admin*', async ( req, res, next ) => {
 
-    if ( req.session && req.session.userId ) {
+//     if ( req.session && req.session.userId ) {
 
-        return next();
+//         return next();
 
-    } else {
+//     } else {
 
-        console.log( "LOGIN AFVIST" )
-        res.set( "Connection", "close" ).status( 401 ).json( { message: 'Du har ikke adgang...' } );
-    }
-} )
+//         console.log( "LOGIN AFVIST" )
+//         res.set( "Connection", "close" ).status( 401 ).json( { message: 'Du har ikke adgang...' } );
+//     }
+// } )
 
 
 // ---- ROUTES

@@ -23,7 +23,7 @@ router.post( '/login', async ( req, res ) => {
         const user = await User.findOne( { email: email } );
 
         if ( !user ) {
-            return res.status( 401 ).json( { message: "User findes ikke ud fra email" } )
+            return res.status( 401 ).json( { message: "Forkert email eller adgangskode" } )
         }
 
 
